@@ -39,8 +39,13 @@ SELECT MAX(salary) as MAX_SALARY_VALUE FROM Employees;
 
 SELECT VERSION();
 
-SHOW TABLES;
+SHOW Tables;
 
 select * from Employees
 where salary between 50000 and 55000;
 
+SELECT * FROM Employees
+WHERE JobTitle = 'IT Specialist' AND salary > 10000;
+
+SELECT * FROM Employees
+WHERE FirstName LIKE 'J%';
