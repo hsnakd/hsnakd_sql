@@ -13,6 +13,11 @@ where `Salary` = 92000;
 
 select max(Salary) from Employees;
 
+SELECT Employees.*
+FROM Employees
+JOIN (SELECT MAX(salary) AS max_salary FROM Employees) AS MaxSalary
+ON Employees.salary = MaxSalary.max_salary;
+
 
 SELECT e1.*
 FROM Employees e1
@@ -24,8 +29,18 @@ JOIN (
 /* 19	Oliver	Harris	Marketing Director	92000	4	9 */
 
 select * from Employees
-select max(salary) from Employees;
+
+SELECT MAX(salary) FROM Employees
+
+SELECT MAX(salary) as MAX_SALARY_VALUE FROM Employees;
 
 
-select salary from Employees
+
+
+SELECT VERSION();
+
+SHOW TABLES;
+
+select * from Employees
 where salary between 50000 and 55000;
+

@@ -29,6 +29,9 @@
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="ba22c959-60c6-4860-95b5-0e46cd29108d" />
   </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" dataset="mydatabase.Address" active-filter-id="" />
+  </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
   </component>
@@ -36,6 +39,7 @@
     <mapping file-url="file://$USER_HOME$/Desktop/SDET/E9-Database Testing/Day4-Self Join,Set Operators, JDBC Intro/Files/create_dev_test.sql" connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" session-id="MAIN" current-schema="mydatabase" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/mysql/queries.sql" connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" session-id="MAIN" current-schema="mydatabase" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/mysql/exercise1.sql" connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" session-id="MAIN" current-schema="mydatabase" />
+    <mapping file-url="file://$PROJECT_DIR$/src/test/java/mysql/hsnakd.sql" connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" session-id="MAIN" current-schema="mydatabase" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />

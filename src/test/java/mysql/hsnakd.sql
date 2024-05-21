@@ -96,4 +96,10 @@ INSERT INTO Employees (ID, FirstName, LastName, JobTitle, Salary, Department_ID,
 (49, 'Matthew', 'Hernandez', 'Marketing Officer', 54000, 4, 9),
 (50, 'Ella', 'King', 'Sales Director', 90000, 5, 10);
 
+TRUNCATE TABLE Employees;
+TRUNCATE TABLE Departments;
+TRUNCATE TABLE Address;
+
+
+
 
