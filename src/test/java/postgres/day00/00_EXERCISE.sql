@@ -1,3 +1,5 @@
+Use postgres;
+
 -- Create the Departments table
 CREATE TABLE DEPARTMENTS_HSN (
     DEPARTMENT_ID INT PRIMARY KEY,

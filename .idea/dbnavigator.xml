@@ -35,8 +35,15 @@
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" dataset="mydatabase.Employees" active-filter-id="" />
+    <filter-actions connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" dataset="hsnakd.employees" active-filter-id="" />
     <filter-actions connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" dataset="mydatabase.Address" active-filter-id="" />
     <filter-actions connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" dataset="mydatabase.Departments" active-filter-id="" />
+    <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="postgres.employees" active-filter-id="" />
+    <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.scrumteam" active-filter-id="" />
+    <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="postgres.address" active-filter-id="" />
+    <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.locations" active-filter-id="" />
+    <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.testers4" active-filter-id="" />
+    <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="postgres.locations_hsn" active-filter-id="" />
     <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.sql_features" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
@@ -44,6 +51,7 @@
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day02/subquery_rownum.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
+    <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day00/00_EXERCISE.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day01/group_by.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day02/string_man_views.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day04/join3.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
@@ -60,6 +68,7 @@
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day04/self_join.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/mysql/geeksforgeeks.sql" connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" session-id="MAIN" current-schema="mydatabase" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/mysql/queries.sql" connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" session-id="MAIN" current-schema="mydatabase" />
+    <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day00/tasks.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/mysql/exercise1.sql" connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" session-id="MAIN" current-schema="mydatabase" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
@@ -264,7 +273,7 @@
     </connections>
     <browser-settings>
       <general>
-        <display-mode value="SELECTOR" />
+        <display-mode value="TABBED" />
         <navigation-history-size value="100" />
         <show-object-details value="false" />
         <enable-sticky-paths value="true" />
