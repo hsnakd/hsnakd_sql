@@ -167,12 +167,70 @@ ALTER TABLE information_schema.testers4 SET SCHEMA hsnakd_schema;
 ALTER TABLE information_schema.developers4 SET SCHEMA hsnakd_schema;
 ALTER TABLE information_schema.scrumteam SET SCHEMA hsnakd_schema;
 
+
+
+-- Create a new schema named it_department_schema
+CREATE SCHEMA it_department_schema;
+
+
+-- Select the it_department_schema schema
+SELECT schema_name
+FROM information_schema.schemata
+WHERE schema_name = 'it_department_schema';
+
+-- Move specific tables to the new schema
+ALTER TABLE hsnakd_schema.testers4 SET SCHEMA it_department_schema;
+ALTER TABLE hsnakd_schema.developers4 SET SCHEMA it_department_schema;
+ALTER TABLE hsnakd_schema.scrumteam SET SCHEMA it_department_schema;
+
+-- Drop the hsnakd_schema and all objects within it
+DROP SCHEMA it_department_schema CASCADE;
+
+
 -- List BASE TABLE type tables
 SELECT table_schema, table_name
 FROM information_schema.tables
 WHERE table_type = 'BASE TABLE'
 ORDER BY table_schema, table_name;
 
--- Drop the postgres schema and all objects within it
-DROP SCHEMA postgres CASCADE;
 
+
+
+CREATE TABLE regions (
+    region_id SERIAL PRIMARY KEY,
+    region_name VARCHAR(50) NOT NULL
+);
+
+
+INSERT INTO regions (region_name) VALUES
+('Europe'),
+('Americas'),
+('Asia'),
+('Middle East and Africa');
+
+select * from regions;
+
+
+CREATE TABLE books (
+    book_id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    publication_year INTEGER,
+    isbn VARCHAR(20),
+    genre VARCHAR(50)
+);
+INSERT INTO books (title, author, publication_year, isbn, genre) VALUES
+('To Kill a Mockingbird', 'Harper Lee', 1960, '9780061120084', 'Fiction'),
+('1984', 'George Orwell', 1949, '9780451524935', 'Dystopian'),
+('Pride and Prejudice', 'Jane Austen', 1813, '9780141439518', 'Romance'),
+('The Great Gatsby', 'F. Scott Fitzgerald', 1925, '9780743273565', 'Fiction'),
+('The Catcher in the Rye', 'J.D. Salinger', 1951, '9780316769488', 'Coming-of-Age');
+select * from books;
+
+
+
+-- Delete all records from the Departments table
+DELETE FROM testers4;
+commit
+-- Drop the Employees table if it exists
+DROP TABLE IF EXISTS testers4;

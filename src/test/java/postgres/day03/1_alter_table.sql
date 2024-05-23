@@ -34,7 +34,7 @@ SELECT * FROM agileteam;
 COMMIT;
 
 -- Truncate the agileteam table to delete all data while keeping the table structure intact
-TRUNCATE TABLE agileteam;
+TRUNCATE TABLE testers4;
 
 -- Drop the agileteam table along with all its data
-DROP TABLE agileteam;
+DROP TABLE testers4;
