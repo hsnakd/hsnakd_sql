@@ -1,66 +1,49 @@
--- get me all info who is working as IT _PROG or SA_REP
+-- Get all info for employees working as IT_PROG or SA_REP
+SELECT * FROM employees
+WHERE job_id IN ('IT_PROG', 'SA_REP');
 
-select * from employees
-where job_id in('IT_PROG','SA_REP');
+-- Count employees working as IT_PROG or SA_REP
+SELECT COUNT(*) FROM employees
+WHERE job_id IN ('IT_PROG', 'SA_REP');
 
---how many employee are working as IT_PROG or SA_REP
-select count(*) from employees
-where job_id in('IT_PROG','SA_REP');
+-- Count employees making more than 8000
+SELECT COUNT(*) FROM employees
+WHERE salary > 8000;
 
---how many employees making more than 8000
-select count(*) from employees
-where salary >8000;
+-- Count unique first names
+SELECT COUNT(DISTINCT first_name) FROM employees;
 
--- how many unique first names we have ? 
-select count(distinct first_name) from employees;
+-- Get all employees information ordered by salary (from highest to lowest)
+SELECT * FROM employees
+ORDER BY salary DESC;
 
--- get me all employees information based on who is making more salary to low salary
-select * from employees
-order by salary asc;
+-- Get all employees information ordered alphabetically by first name
+SELECT * FROM employees
+ORDER BY first_name;
 
---desc 9-0 Z-A
---asc 0-9 a-Z
+-- Get employees whose first name starts with 'C'
+SELECT * FROM employees
+WHERE first_name LIKE 'C%';
 
---get me all emp info order by alphabetical based on firstname 
-select * 
-from employees
-order by first_name;
+-- Get employees with 5-letter first names where the middle character is 'z'
+SELECT * FROM employees
+WHERE first_name LIKE '__z__';
 
---NOTE: default order type is asc if you don't specify after column name
+-- Get employees with first names where the second character is 'u'
+SELECT * FROM employees
+WHERE first_name LIKE '_u%';
 
--- get me all employees whose first name starts with C
-select * 
-from employees
-where first_name like 'C%';
+-- Find minimum salary
+SELECT MIN(salary) FROM employees;
 
---get me 5 letter first names where the middle char is z;
+-- Find maximum salary
+SELECT MAX(salary) FROM employees;
 
-select * 
-from employees
-where first_name like '__z__';
+-- Find average salary
+SELECT AVG(salary) FROM employees;
 
---get me first name where second char is u;
-select *
-from employees
-where first_name like '_u%';
+-- Round average salary to two decimal places
+SELECT ROUND(AVG(salary), 2) FROM employees;
 
-
-select * from employees;
-
---find me minimum salary
-select min(salary) from employees;
-
---find me max salary
-select max(salary) from employees;
-
---find me avg salary
-select avg(salary) from employees;
-
---round
-
-select round(avg(salary),2) from employees;
-
-select sum(salary) from employees;
-
-
-
+-- Find total salary sum
+SELECT SUM(salary) FROM employees;

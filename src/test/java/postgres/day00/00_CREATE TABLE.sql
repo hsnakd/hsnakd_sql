@@ -19,7 +19,7 @@ CREATE TABLE LOCATIONS (
 
 -- Create the Employees table
 CREATE TABLE EMPLOYEES (
-    EMPLOYEE_ID INT PRIMARY KEY,
+    EMPLOYEE_ID INT PRIMARY KEY NOT NULL,
     FIRST_NAME VARCHAR(50),
     LAST_NAME VARCHAR(50),
     EMAIL VARCHAR(100),
@@ -30,18 +30,19 @@ CREATE TABLE EMPLOYEES (
     DEPARTMENT_ID INT
 );
 
+-- Create the Countries table
 CREATE TABLE Countries (
     CountryID VARCHAR(2) PRIMARY KEY,
     CountryName VARCHAR(100)
 );
 
+-- Insert data into Countries table
 INSERT INTO Countries (CountryID, CountryName)
 VALUES
     ('US', 'United States'),
     ('CA', 'Canada');
 
--- Employees data
--- Inserting data into DEPARTMENTS table
+-- Insert data into DEPARTMENTS table
 INSERT INTO DEPARTMENTS (DEPARTMENT_ID, DEPARTMENT_NAME, MANAGER_ID, LOCATION_ID)
 VALUES
     (10, 'Administration', NULL, 1700),
@@ -125,30 +126,53 @@ VALUES
 
 
 
-
-
--- Employees tablosundaki tüm içeriği sil
-
-Delete FROM Employees;
--- Address tablosundaki tüm içeriği sil
+-- Delete all records from the Employees table
+DELETE FROM Employees;
+-- Delete all records from the Address table
 DELETE FROM Address;
--- Departments tablosundaki tüm içeriği sil
+-- Delete all records from the Departments table
 DELETE FROM Departments;
 
-
--- Employees tablosunu kaldır
+-- Drop the Employees table if it exists
 DROP TABLE IF EXISTS Employees;
-
--- Address tablosunu kaldır
+-- Drop the Address table if it exists
 DROP TABLE IF EXISTS Address;
-
--- Departments tablosunu kaldır
+-- Drop the Departments table if it exists
 DROP TABLE IF EXISTS Departments;
+-- Drop the Countries table if it exists
+DROP TABLE IF EXISTS Countries;
+-- Drop the Countries table if it exists
+DROP TABLE IF EXISTS testers4;
 
--- countries tablosunu kaldır
-DROP TABLE IF EXISTS countries;
+-- Create a new schema named hsnakd_schema
+CREATE SCHEMA hsnakd_schema;
 
-SELECT * FROM departments;
-SELECT * FROM Employees;
-SELECT * FROM locations;
-SELECT * FROM countries;
+-- Move specific tables to the new schema
+ALTER TABLE information_schema.testers4
+SET SCHEMA hsnakd_schema;
+
+ALTER TABLE information_schema.developers4
+SET SCHEMA hsnakd_schema;
+
+ALTER TABLE information_schema.scrumteam
+SET SCHEMA hsnakd_schema;
+
+-- Select the hsnakd_schema schema
+SELECT schema_name
+FROM information_schema.schemata
+WHERE schema_name = 'hsnakd_schema';
+
+-- Move specific tables to the new schema
+ALTER TABLE information_schema.testers4 SET SCHEMA hsnakd_schema;
+ALTER TABLE information_schema.developers4 SET SCHEMA hsnakd_schema;
+ALTER TABLE information_schema.scrumteam SET SCHEMA hsnakd_schema;
+
+-- List BASE TABLE type tables
+SELECT table_schema, table_name
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE'
+ORDER BY table_schema, table_name;
+
+-- Drop the postgres schema and all objects within it
+DROP SCHEMA postgres CASCADE;
+

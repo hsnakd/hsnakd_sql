@@ -1,8 +1,10 @@
-select * from employees;
+-- Retrieve all data from the employees table
+SELECT * FROM employees;
 
-select * from departments;
+-- Retrieve all data from the departments table
+SELECT * FROM departments;
 
-
-select first_name,last_name,department_name
-from employees e left join departments d
-on e.department_id = d.department_id;
+-- Perform a left join to get the first name, last name, and department name of employees with matching department IDs
+SELECT first_name, last_name, department_name
+FROM employees e
+LEFT JOIN departments d ON e.department_id = d.department_id;

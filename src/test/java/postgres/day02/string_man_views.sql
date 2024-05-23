@@ -1,57 +1,42 @@
---how can we rename the column that we displayed
-select first_name as "given_name", last_name as "surname"
-from employees;
+-- Rename columns using aliases
+SELECT first_name AS "given_name", last_name AS "surname"
+FROM employees;
 
---text functions,string mani.
---java first_name+" "+last_name
--- in sql concat is ||
+-- Concatenate first_name and last_name to create a new column "full_name"
+SELECT first_name || ' ' || last_name AS "full_name"
+FROM employees;
 
-select first_name||' '||last_name as "full_name"
-from employees;
+-- Task: Add "@gmail.com" to emails and name the new column "full_email"
+SELECT email || '@gmail.com' AS "full_email"
+FROM employees;
 
---Task;
---add @gmail.com and name new column to full_email
-select email from employees;
+-- Convert emails to lowercase and add "@gmail.com"
+SELECT LOWER(email) || '@gmail.com' AS "full_email"
+FROM employees;
 
-select email||'@gmail.com' as "full_email"
-from employees;
+-- Convert emails to uppercase and add "@gmail.com"
+SELECT UPPER(email) || '@gmail.com' AS "full_email"
+FROM employees;
 
---making all lowercase
-select lower(email||'@gmail.com') as "full_email"
-from employees;
+-- Get first_name and its length, ordered by length in descending order
+SELECT first_name, LENGTH(first_name) AS "length_name"
+FROM employees
+ORDER BY "length_name" DESC;
 
---upper case
-select upper(email||'@gmail.com') as "full_email"
-from employees;
+-- Get initials (first letter of first_name and last_name)
+SELECT SUBSTR(first_name, 1, 1) || '.' || SUBSTR(last_name, 1, 1) AS "initials"
+FROM employees;
 
---length(value)
-select first_name,length(first_name) as "length_name"
-from employees
-order by "length_name" desc;
+-- Create a view named Emaillist_jamal
+CREATE VIEW Emaillist_jamal AS
+SELECT SUBSTR(first_name, 1, 1) || '.' || SUBSTR(last_name, 1, 1) AS "initials",
+       first_name || ' ' || last_name AS "full_name",
+       LOWER(email) || '@gmail.com' AS "full_email"
+FROM employees;
 
+-- Select from the created view
+SELECT "full_name"
+FROM Emaillist_jamal;
 
-
---  ----------------------------------------------------------------
-
-
---substr(colName,begIndex,NumberOfChar)
-select substr(first_name,0,1)||'.'||substr(last_name,0,1) as "initials"
-from employees;
-
-select substr(first_name,0,1)||'.'||substr(last_name,0,1) as "initials",
-first_name||' '||last_name as "full_name",lower(email||'@gmail.com') as "full_email"
-from employees;
-
---VIEW
-CREATE VIEW Emaillist_jamal as select substr(first_name,0,1)||'.'||substr(last_name,0,1) as "initials",
-first_name||' '||last_name as "full_name",lower(email||'@gmail.com') as "full_email"
-from employees;
-
-select "full_name"
-from Emaillist;
-
---to remove view
-drop view Emaillist_jamal;
-
-
-
+-- Drop the created view
+DROP VIEW Emaillist_jamal;

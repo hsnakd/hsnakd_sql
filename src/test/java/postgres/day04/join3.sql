@@ -1,46 +1,44 @@
---get me first_name,last_name and department name for all employees
+-- Retrieve all data from the employees table
+SELECT * FROM employees;
 
-select * from employees;
+-- Retrieve all data from the departments table
+SELECT * FROM departments;
 
-select * from departments;
+-- Retrieve all data from the locations table
+SELECT * FROM locations;
 
-select * from locations;
+-- Get the first name, last name, and department name for all employees where the department is not assigned
+SELECT first_name, last_name, department_name
+FROM employees e
+LEFT JOIN departments d ON e.department_id = d.department_id
+WHERE e.department_id IS NULL;
 
-select first_name,last_name,department_name
-from employees e left join departments d
-on e.department_id = d.department_id
-where e.department_id is null;
+-- Explanation:
+-- This query retrieves the first name, last name, and department name for all employees using a left join.
+-- It includes employees who do not have a department assigned.
 
---get me first_name,last_name and department_name,city for all employees
-select first_name,last_name,department_name,city
-from employees e join departments d
-on e.department_id = d.department_id
-join locations l
-on d.location_id = l.location_id;
+-- Get the first name, last name, department name, and city for all employees
+SELECT first_name, last_name, department_name, city
+FROM employees e
+JOIN departments d ON e.department_id = d.department_id
+JOIN locations l ON d.location_id = l.location_id;
 
---get me firstname,lastname and department name, city,country_name for all employees;
-SELECT
-    e.first_name,
-    e.last_name,
-    d.department_name,
-    l.city,
-    c.countryname -- country_id yerine countryname
-FROM
-    employees e
-JOIN
-    departments d ON e.department_id = d.department_id
-JOIN
-    locations l ON d.location_id = l.location_id
-JOIN
-    countries c ON l.country_id = c.countryid; -- country_id yerine countryid
+-- Explanation:
+-- This query retrieves the first name, last name, department name, and city for all employees using inner joins.
 
+-- Get the first name, last name, department name, city, and country name for all employees
+SELECT e.first_name, e.last_name, d.department_name, l.city, c.countryname
+FROM employees e
+JOIN departments d ON e.department_id = d.department_id
+JOIN locations l ON d.location_id = l.location_id
+JOIN countries c ON l.country_id = c.countryid;
 
+-- Explanation:
+-- This query retrieves the first name, last name, department name, city, and country name for all employees using inner joins.
+-- It joins the employees, departments, locations, and countries tables to get the desired information.
 
-SELECT
-    e.first_name, e.last_name, d.department_name, l.city
-FROM employees e JOIN departments d
-ON e.department_id = d.department_id
-JOIN locations l
-ON d.location_id = l.location_id;
-
-
+-- Get the first name, last name, department name, and city for all employees (simplified version)
+SELECT e.first_name, e.last_name, d.department_name, l.city
+FROM employees e
+JOIN departments d ON e.department_id = d.department_id
+JOIN locations l ON d.location_id = l.location_id;

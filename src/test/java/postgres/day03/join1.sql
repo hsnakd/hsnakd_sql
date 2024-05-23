@@ -1,21 +1,25 @@
-select * from customer;
+-- Retrieve all data from the customer table
+SELECT * FROM customer;
 
-select * from address;
+-- Retrieve all data from the address table
+SELECT * FROM address;
 
-select first_name,last_name,address,phone
-from customer join address
-on customer.address_id = address.address_id;
+-- Perform an inner join to get the first name, last name, address, and phone number of customers with matching address IDs
+SELECT first_name, last_name, address, phone
+FROM customer
+JOIN address ON customer.address_id = address.address_id;
 
-select first_name,last_name,c.address_id,address,phone
-from customer c left join address a
-on c.address_id = a.address_id;
+-- Perform a left join to get the first name, last name, address, and phone number of all customers, including those without matching address IDs
+SELECT first_name, last_name, c.address_id, address, phone
+FROM customer c
+LEFT JOIN address a ON c.address_id = a.address_id;
 
-select first_name,last_name,c.address_id,a.address_id,address,phone
-from customer c right join address a
-on c.address_id = a.address_id;
+-- Perform a right join to get the first name, last name, address, and phone number of all addresses, including those without matching customer IDs
+SELECT first_name, last_name, c.address_id, a.address_id, address, phone
+FROM customer c
+RIGHT JOIN address a ON c.address_id = a.address_id;
 
-
-select first_name,last_name,c.address_id,a.address_id,address,phone
-from customer c full join address a
-on c.address_id = a.address_id;
-
+-- Perform a full outer join to get the first name, last name, address, and phone number of all customers and addresses, including those without matching IDs
+SELECT first_name, last_name, c.address_id, a.address_id, address, phone
+FROM customer c
+FULL JOIN address a ON c.address_id = a.address_id;

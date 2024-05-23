@@ -1,57 +1,41 @@
--- I want to see firstname lastname phone number of david(s)
+-- Retrieve first name, last name, and phone number of employees named David Austin
+SELECT first_name, last_name, phone_number
+FROM employees
+WHERE first_name = 'David' AND last_name = 'Austin';
 
-select first_name,last_name,phone_number
-from employees
-where first_name = 'David' and last_name = 'Austin';
+-- Retrieve all information of employees earning more than 7000 salary
+SELECT * FROM employees
+WHERE salary > 7000;
 
---get me all information who is making more than 7000 salary
-select * from employees 
-where salary > 7000;
+-- Retrieve email and salary of employees earning less than 4000
+SELECT email, salary FROM employees
+WHERE salary < 4000;
 
---get me email of who is making less than 4000
-select email, salary from employees
-where salary < 4000;
+-- Retrieve all information of employees working as IT_PROG or SA_REP
+SELECT * FROM employees
+WHERE job_id IN ('IT_PROG', 'SA_REP');
 
---get me all info who is working as IT_PROG or SA_REP
-select * from employees
-where job_id = 'IT_PROG' or job_id = 'SA_REP';
+-- Retrieve first name, last name, and salary of employees earning between 5000 and 10000
+SELECT first_name, last_name, salary
+FROM employees
+WHERE salary BETWEEN 5000 AND 10000;
 
+-- Retrieve all information of employees with employee_id between 130 and 170
+SELECT *
+FROM employees
+WHERE employee_id BETWEEN 130 AND 170;
 
---get me first_name,last_name salary who is making more than 5000 and less than 10000
-select first_name,last_name,salary
-from employees
-where salary >= 5000 and salary <=10000;
+-- Retrieve all information of employees with specific employee_ids
+SELECT *
+FROM employees
+WHERE employee_id IN (135, 176, 154, 129);
 
-select first_name,last_name,salary
-from employees
-where salary between 5000 and 10000;
+-- Retrieve city where country_id is 'US'
+SELECT city, country_id
+FROM locations
+WHERE country_id = 'US';
 
---get me all info where emp_id 130 to 170
-select *
-from employees
-where employee_id between 130 and 170;
-
---get me all info where employee_id 135 176 154 129
-select * 
-from employees
-where employee_id = 135 or employee_id = 176 or employee_id = 154 or  employee_id = 129;
-
-select *
-from employees
-where employee_id in(135,176,154,129);
-
---get me city of where country_id IT,US,UK
-
-select city,country_id
-from locations
-where country_id in('US');
-
-
-select city,country_id
-from locations
-where country_id in('CA','US');
-
-
-
-
-
+-- Retrieve city where country_id is 'CA' or 'US'
+SELECT city, country_id
+FROM locations
+WHERE country_id IN ('CA', 'US');

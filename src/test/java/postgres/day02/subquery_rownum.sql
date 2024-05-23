@@ -1,65 +1,39 @@
---how to find employees information of who is making highest salary in the company ?
+-- Get the highest salary
+SELECT MAX(salary) FROM employees;
 
---get me the highest salary 
-select max(salary) from employees;
+-- Highest salary employee information
+SELECT * FROM employees
+WHERE salary = 24000;
 
---highest salary employee information
-select *
-from employees
-where salary = 24000;
+-- Subquery solution in one shot
+SELECT * FROM employees
+WHERE salary = (SELECT MAX(salary) FROM employees);
 
+-- Finding the second highest salary
+-- Get the highest salary first
+SELECT MAX(salary) FROM employees;
 
---subquery solution in one shot 
-select *
-from employees
-where salary = (select max(salary) from employees);
+-- Highest after 24k
+SELECT MAX(salary)
+FROM employees
+WHERE salary < 24000;
 
---finding second highest salary
---get highest salary first
-select max(salary) from employees;
+-- One-shot combining two queries
+SELECT MAX(salary)
+FROM employees
+WHERE salary < (SELECT MAX(salary) FROM employees);
 
---highest after 24k 
-select max(salary)
-from employees
-where salary <24000;
-
---one shot combining two queries
-
-select max(salary)
-from employees
-where salary < (select max(salary) from employees);
-
---employee information of who is making second highest salary ? 
-select * 
-from employees
-where salary = (select max(salary)from employees where salary < (select max(salary) from employees) );
-
-----------
-select * from employees;
-
-select * from employees
-order by salary desc;
-
-
-
-
--- Oracle
-select *
-from employees
-where rownum < 11;
-
--- PostgreSQL
+-- Employee information of who is making the second highest salary
 SELECT *
 FROM employees
-LIMIT 10;
+WHERE salary = (SELECT MAX(salary) FROM employees WHERE salary < (SELECT MAX(salary) FROM employees));
 
-
---list the employees who is making top 10 salary
+-- List the employees who are making the top 10 salary
 -- Oracle
-select *
-from employees
-where rownum < 11
-order by salary desc;
+SELECT *
+FROM employees
+WHERE rownum < 11
+ORDER BY salary DESC;
 
 -- PostgreSQL
 SELECT *
@@ -67,12 +41,11 @@ FROM employees
 ORDER BY salary DESC
 LIMIT 10;
 
-
---order all employees based on salary high to low then display only first 10 result
+-- Order all employees based on salary high to low then display only the first 10 results
 -- Oracle
-select *
-from (select * from employees order by salary desc)
-where rownum < 11;
+SELECT *
+FROM (SELECT * FROM employees ORDER BY salary DESC)
+WHERE rownum < 11;
 
 -- PostgreSQL
 SELECT *
@@ -82,3 +55,5 @@ FROM (
     ORDER BY salary DESC
     LIMIT 10
 ) AS top_10_salaries;
+
+

@@ -27,7 +27,9 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" object-ref="schemas/information_schema/tables/testers4" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="ba22c959-60c6-4860-95b5-0e46cd29108d" />
@@ -40,9 +42,15 @@
     <filter-actions connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" dataset="mydatabase.Departments" active-filter-id="" />
     <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="postgres.employees" active-filter-id="" />
     <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.scrumteam" active-filter-id="" />
+    <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.developers4" active-filter-id="" />
+    <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.departments" active-filter-id="" />
     <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="postgres.address" active-filter-id="" />
     <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.locations" active-filter-id="" />
-    <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.testers4" active-filter-id="" />
+    <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.testers4" active-filter-id="58a2556d-96e4-4ad7-8664-9bf2a47fbbae">
+      <filter id="58a2556d-96e4-4ad7-8664-9bf2a47fbbae" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id_number" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
     <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="postgres.locations_hsn" active-filter-id="" />
     <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.sql_features" active-filter-id="" />
   </component>
@@ -62,6 +70,7 @@
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day00/00_CREATE TABLE.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day03/join1.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day03/customerandaddress.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
+    <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day04/1_create_dev_test.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$USER_HOME$/Desktop/SDET/E9-Database Testing/Day4-Self Join,Set Operators, JDBC Intro/Files/create_dev_test.sql" connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" session-id="MAIN" current-schema="mydatabase" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day03/join2.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day01/select.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
