@@ -31,13 +31,13 @@ CREATE TABLE EMPLOYEES (
 );
 
 -- Create the Countries table
-CREATE TABLE Countries (
+CREATE TABLE COUNTRIES (
     CountryID VARCHAR(2) PRIMARY KEY,
     CountryName VARCHAR(100)
 );
 
 -- Insert data into Countries table
-INSERT INTO Countries (CountryID, CountryName)
+INSERT INTO COUNTRIES (CountryID, CountryName)
 VALUES
     ('US', 'United States'),
     ('CA', 'Canada');
@@ -196,13 +196,13 @@ ORDER BY table_schema, table_name;
 
 
 
-CREATE TABLE regions (
+CREATE TABLE REGIONS (
     region_id SERIAL PRIMARY KEY,
     region_name VARCHAR(50) NOT NULL
 );
 
 
-INSERT INTO regions (region_name) VALUES
+INSERT INTO REGIONS (region_name) VALUES
 ('Europe'),
 ('Americas'),
 ('Asia'),
@@ -211,7 +211,7 @@ INSERT INTO regions (region_name) VALUES
 select * from regions;
 
 
-CREATE TABLE books (
+CREATE TABLE BOOKS (
     book_id SERIAL PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     author VARCHAR(255) NOT NULL,
@@ -219,7 +219,7 @@ CREATE TABLE books (
     isbn VARCHAR(20),
     genre VARCHAR(50)
 );
-INSERT INTO books (title, author, publication_year, isbn, genre) VALUES
+INSERT INTO BOOKS (title, author, publication_year, isbn, genre) VALUES
 ('To Kill a Mockingbird', 'Harper Lee', 1960, '9780061120084', 'Fiction'),
 ('1984', 'George Orwell', 1949, '9780451524935', 'Dystopian'),
 ('Pride and Prejudice', 'Jane Austen', 1813, '9780141439518', 'Romance'),

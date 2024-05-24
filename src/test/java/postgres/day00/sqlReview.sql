@@ -1,5 +1,5 @@
 -- select all columns from EMPLOYEES table
-select * from EMPLOYEES;
+SELECT * from EMPLOYEES;
 
 -- select only the FIRST_NAME column from EMPLOYEES table
 select FIRST_NAME from EMPLOYEES;
