@@ -1,10 +1,6 @@
 -- Create a new schema named it_department_schema
 CREATE SCHEMA edit_table;
 
-
-
-ROLLBACK; -- End the current transaction
-
 -- End the current session
 RESET ALL;
 
@@ -21,8 +17,6 @@ CREATE TABLE students (
     grade CHAR(2),
     description VARCHAR(100)
 );
-
-
 
 
 -- Insert sample data into the students table
@@ -58,6 +52,7 @@ WHERE student_id = 2;
 -- Deleting a column from the table
 ALTER TABLE students
 DROP COLUMN address;
+
 
 -- Renaming a column in the table
 ALTER TABLE students
