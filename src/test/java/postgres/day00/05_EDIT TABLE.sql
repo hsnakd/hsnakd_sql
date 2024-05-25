@@ -111,12 +111,17 @@ UPDATE students
 SET grade = 'A'
 WHERE student_id = 11;
 
+-- Renaming the table from 'students' to 'student_records'
+ALTER TABLE students
+RENAME TO student_records;
 
-
-
+-- Renaming the table back from 'student_records' to 'students'
+ALTER TABLE student_records
+RENAME TO students;
 
 -- Select all columns from the students table
 SELECT * FROM students;
+
 
 -- Delete all records from the students table
 DELETE FROM students;
