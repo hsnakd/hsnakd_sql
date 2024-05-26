@@ -119,6 +119,12 @@ RENAME TO student_records;
 ALTER TABLE student_records
 RENAME TO students;
 
+-- Selecting the address for the student with student_id 11
+SELECT email
+FROM students
+WHERE student_id = 11;
+
+
 -- Select all columns from the students table
 SELECT * FROM students;
 

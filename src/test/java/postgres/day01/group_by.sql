@@ -18,7 +18,7 @@ GROUP BY job_id
 HAVING AVG(salary) > 5000;
 
 -- Get job_ids where their average salary is more than 5k (alternative approach)
-SELECT job_id, AVG(salary), COUNT(*), SUM(salary)
+SELECT job_id,  SUM(salary), COUNT(*), AVG(salary)
 FROM employees
 WHERE salary > 5000
 GROUP BY job_id;
