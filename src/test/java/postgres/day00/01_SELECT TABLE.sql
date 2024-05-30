@@ -35,7 +35,7 @@ ORDER BY table_type, table_schema, table_name;
 -- Explanation of table types:
 -- BASE TABLE: Standard tables where data is stored.
 -- VIEW: A virtual table based on the result-set of an SQL query.
--- MATERIALIZED VIEW: Stores the result-set of a query physically and can be refreshed periodically.
+-- ,MATERIALIZED VIEW: Stores the result-set of a query physically and can be refreshed periodically.
 -- FOREIGN TABLE: Tables that use the Foreign Data Wrapper to access data stored outside of PostgreSQL.
 
 

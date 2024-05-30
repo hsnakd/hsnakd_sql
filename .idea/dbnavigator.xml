@@ -38,8 +38,8 @@
     <filter-actions connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" dataset="hsnakd.employees" active-filter-id="" />
     <filter-actions connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" dataset="mydatabase.Address" active-filter-id="" />
     <filter-actions connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" dataset="mydatabase.Departments" active-filter-id="" />
-    <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.developers4" active-filter-id="" />
     <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.scrumteam" active-filter-id="" />
+    <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.developers4" active-filter-id="" />
     <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.books" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.locations" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.employees" active-filter-id="EMPTY_FILTER" />
@@ -50,11 +50,19 @@
         <condition column="id_number" operator="=" value="" active="true" />
       </filter>
     </filter-actions>
+    <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="public.regions" active-filter-id="" />
+    <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="postgres.book" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="postgres.author" active-filter-id="0d6b6dfe-a112-418c-8a81-daea6c885dd7">
+      <filter id="0d6b6dfe-a112-418c-8a81-daea6c885dd7" name="Filter" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
     <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="postgres.employees" active-filter-id="" />
     <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.allstudents" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.departments" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="edit_table.students" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="postgres.address" active-filter-id="" />
+    <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="pg_catalog.pg_aggregate" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.address" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.sql_features" active-filter-id="" />
     <filter-actions connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" dataset="information_schema.countries" active-filter-id="EMPTY_FILTER" />
@@ -67,10 +75,13 @@
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day02/subquery_rownum.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day00/01_SELECT TABLE.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day03/1_alter_table.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="it_department_schema" />
+    <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/fastTrack/select.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day02/sub_interview.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day01/like_agg.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
+    <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/fastTrack/7_groupBy.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/mysql/hsnakd.sql" connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" session-id="MAIN" current-schema="mydatabase" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day03/customerandaddress.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="it_department_schema" />
+    <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/fastTrack/distinct.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$USER_HOME$/Desktop/SDET/E9-Database Testing/Day4-Self Join,Set Operators, JDBC Intro/Files/create_dev_test.sql" connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" session-id="MAIN" current-schema="mydatabase" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day04/self_join.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day00/tasks.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
@@ -78,18 +89,25 @@
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day03/0_create_table.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="it_department_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day00/05_EDIT TABLE.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="edit_table" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day01/group_by.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
+    <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/fastTrack/8_having.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day02/string_man_views.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day00/cydeo.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day04/join3.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day01/where.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day00/00_CREATE TABLE.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day03/join1.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
+    <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/fastTrack/5_like.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
+    <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/fastTrack/6_aggreate.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
+    <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/fastTrack/9_as.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day04/2_set_operators.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="hsnakd_schema" />
+    <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/taskNextBasket/task.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="postgres" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day04/1_create_dev_test.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
+    <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/fastTrack/3_where.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day03/join2.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/day01/select.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/mysql/queries.sql" connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" session-id="MAIN" current-schema="mydatabase" />
     <mapping file-url="file://$PROJECT_DIR$/src/test/java/mysql/geeksforgeeks.sql" connection-id="ba22c959-60c6-4860-95b5-0e46cd29108d" session-id="MAIN" current-schema="mydatabase" />
+    <mapping file-url="file://$PROJECT_DIR$/src/test/java/postgres/fastTrack/4_orderBy.sql" connection-id="ca0a925b-de2c-40b5-be83-7a77bb65f8a9" session-id="MAIN" current-schema="information_schema" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />

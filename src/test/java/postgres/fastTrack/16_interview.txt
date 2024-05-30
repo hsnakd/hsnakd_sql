@@ -1,0 +1,95 @@
+Do you have experience in creating SQL queries?
+    Yes, I have experience in creating SQL queries.
+
+
+What types of Joins do you know?
+    There are several types of joins in SQL:
+    Inner Join
+    Left Join (or Left Outer Join)
+    Right Join (or Right Outer Join)
+    Full Join (or Full Outer Join)
+    Cross Join
+
+
+Do you know about joins in sql? Let's say we have an employee_id in two tables, how do you use joins to extract data from the two tables?
+    Yes, I'm familiar with joins in SQL. If there's an employee_id in two tables and you want to extract data from both tables based on this common key, you can use different types of joins depending on your requirement. For example:
+
+        SELECT *
+        FROM table1
+        INNER JOIN table2 ON table1.employee_id = table2.employee_id;
+
+
+How do you know relational database tables are connected to each other?
+
+    Relational database tables are connected to each other through relationships defined by primary and foreign keys. A foreign key in one table refers to the primary key in another table, establishing a link between them.
+
+
+What are wildcards in SQL, give an example?
+    Wildcards in SQL are used in conjunction with the LIKE operator to perform pattern matching in queries. Examples of wildcards:
+
+        %: Matches any sequence of characters (including zero characters).
+        _: Matches any single character.
+
+    For example:
+
+        SELECT * FROM employees WHERE name LIKE 'J%'; -- selects names starting with 'J'
+
+
+How to get the second max value in a table?
+    To get the second maximum value in a table, you can use a subquery with the MAX() function:
+
+        SELECT MAX(column_name)
+        FROM table_name
+        WHERE column_name < (SELECT MAX(column_name) FROM table_name);
+
+
+SQL Command Language, what are DML commands? What does SQL,DML,DDL stand for?
+    DML stands for Data Manipulation Language, which includes commands such as INSERT, UPDATE, DELETE. SQL stands for Structured Query Language, and DDL stands for Data Definition Language, which includes commands like CREATE, ALTER, DROP.
+
+
+On a scale of 1-10 (10 being the highest) how would you rate yourself in SQL?
+    I would rate myself as a 7 in SQL.
+
+
+What's primary key and foreign key?
+    A primary key is a column or a set of columns that uniquely identifies each row in a table. A foreign key is a column or a set of columns in one table that refers to the primary key in another table, establishing a link between the two tables.
+
+
+How do you get unique values with SQL?
+    To get unique values in SQL, you can use the DISTINCT keyword:
+
+        SELECT DISTINCT column_name FROM table_name;
+
+
+Tell me about joins? how many of them?
+    Joins in SQL are used to combine rows from two or more tables based on a related column between them. There are different types of joins: Inner Join, Left Join, Right Join, Full Join, and Cross Join.
+
+
+How do you join 3 tables?
+    To join three tables in SQL, you can use multiple JOIN clauses:
+
+SELECT *
+FROM table1
+JOIN table2 ON table1.column_name = table2.column_name
+JOIN table3 ON table2.column_name = table3.column_name;
+
+
+Third-highest salary
+    To find the third-highest salary in a table, you can use the LIMIT clause:
+
+        SELECT DISTINCT salary
+        FROM employees
+        ORDER BY salary DESC
+        LIMIT 2, 1;
+
+
+DESC and ASC in sql
+    DESC and ASC are keywords used in SQL to specify the sorting order of the result set. DESC sorts the result set in descending order, while ASC sorts the result set in ascending order.
+
+
+What is a Distinct keyword in sql
+    The DISTINCT keyword in SQL is used to return only unique values in the result set. It eliminates duplicate rows from the output.
+
+
+What is the difference between union and union All
+    The main difference between UNION and UNION ALL in SQL is that UNION removes duplicate rows from the result set, while UNION ALL includes all rows from both result sets, including duplicates.
